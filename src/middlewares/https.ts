@@ -6,7 +6,6 @@ export function checkHttpS(req: Request, res: Response, next: NextFunction) {
     }
 
     res.send("Not secure connection")
-
     next();
 }
 
