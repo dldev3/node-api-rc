@@ -1,9 +1,13 @@
-import { Router } from "express";
+import { Router, Request, Response } from "express";
 
 export const router = Router();
 
-router.get('/', (req, res) => {
-    res.send({ message: "OK" });
+router.get('/', (req: Request, res: Response) => {
+    res.send(
+        {
+            message: "OK",
+            timestamp: req.timestamp
+        });
 })
 
 

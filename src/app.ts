@@ -1,10 +1,11 @@
 import express from 'express';
 import { healthRouter, calculatorRouter } from './routes';
-import { logger } from './middlewares';
+import { addTimestamp, logger } from './middlewares';
 
 const app = express();
 const port = 3000;
 
+app.use(addTimestamp);
 app.use(logger);
 
 app.use('/health', healthRouter);
