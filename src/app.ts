@@ -5,6 +5,8 @@ import { addTimestamp, errorHandler, logger } from './middlewares';
 const app = express();
 const port = 3000;
 
+app.use(express.json());
+
 app.use(addTimestamp);
 app.use(logger);
 
